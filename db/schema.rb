@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_28_134120) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_28_134256) do
   create_table "strains", force: :cascade do |t|
     t.string "name"
     t.boolean "avalaible"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wines", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
