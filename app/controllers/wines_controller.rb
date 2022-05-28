@@ -58,13 +58,14 @@ class WinesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_wine
-      @wine = Wine.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def wine_params
-      params.require(:wine).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_wine
+    @wine = Wine.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def wine_params
+    params.require(:wine).permit(:name, { strain_ids: [] })
+  end
 end
