@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :amigos
   get 'home/index'
   devise_for :peters
   root "home#index"
