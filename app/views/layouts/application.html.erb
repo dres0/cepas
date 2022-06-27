@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Cepas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,7 +10,11 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <%= javascript_importmap_tags %>
   </head>
+
   <body class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
+  
 </html>
