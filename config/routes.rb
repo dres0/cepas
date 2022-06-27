@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :peters
-  resources :wines
-  resources :strains
-  root "wines#index"
+  root "home#index"
+  authenticate :peter do
+    resources :wines
+    resources :strains
+	end
 end
